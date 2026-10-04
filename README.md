@@ -9,9 +9,9 @@ Licence: Creative Commons Attribution 4.0 International (CC BY 4.0)
 File used: `hour.csv` 17,379 hourly records
 
 Setup
-Python 3.11 or 3.12.
+Python 3.12.
 
 ```bash
 python -m venv .venv
-.\.venv\Scripts\Activate.ps1
+.\.venv\Scripts\activate.bat
 pip install -r requirements.txt
