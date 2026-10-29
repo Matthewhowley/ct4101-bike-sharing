@@ -46,7 +46,7 @@ def timeSplit(df: pd.DataFrame, cutoff: str):
     train = df[df["dteday"] < cutoff].copy()
     test = df[df["dteday"] >= cutoff].copy()
     
-    print("\n=== SPLIT ===")
+    print("\nSplit")
     print(f"Cutoff: {cutoff}")
     print(f"Train rows: {len(train)} ({dateSpan(train['dteday'])})")
     print(f"Test rows:  {len(test)} ({dateSpan(test['dteday'])})")
@@ -94,7 +94,7 @@ def main() -> None:
     hour_metrics = hourMeanBaseline(train, test)
     global_metrics = globalMeanBaseline(train, test)
 
-    print("\n=== BASELINE RESULTS (test set) ===")
+    print("\nBASELINE RESULTS (test set)")
     print("Hour-of-day mean (primary baseline):")
     printMetrics(hour_metrics)
     print("Global training mean (reference):")
