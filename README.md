@@ -15,3 +15,14 @@ Python 3.12.
 python -m venv .venv
 .\.venv\Scripts\activate.bat
 pip install -r requirements.txt
+```
+## Run the baseline (Milestone 2)
+
+Place `hour.csv` in `data/`. 
+Then from the project root with the virtual environment active,
+.\.venv\Scripts\activate.bat
+python src/baseline.py
+
+The script prints a data audit, the time-based split (train before the 1st of October 2012, test from that date onward)
+and MAE / RMSE / R² for an hour-of-day mean baseline and a global-mean reference. 
+The test block is not used for model choice.
