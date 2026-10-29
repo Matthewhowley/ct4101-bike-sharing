@@ -1,0 +1,63 @@
+Data Audit
+Shape: (17379, 17)
+
+Dtypes:
+instant                int64
+dteday        datetime64[us]
+season                 int64
+yr                     int64
+mnth                   int64
+hr                     int64
+holiday                int64
+weekday                int64
+workingday             int64
+weathersit             int64
+temp                 float64
+atemp                float64
+hum                  float64
+windspeed            float64
+casual                 int64
+registered             int64
+cnt                    int64
+
+Missing values: 0
+Duplicate rows: 0
+Duplicate (dteday, hr) pairs: 0
+
+Target distribution:
+count    17379.00
+mean       189.46
+std        181.39
+min          1.00
+25%         40.00
+50%        142.00
+75%        281.00
+max        977.00
+cnt min/max: 1 / 977
+cnt values outside 1.5*IQR: 505
+weathersit value counts:
+weathersit
+1    11413
+2     4544
+3     1419
+4        3
+Name: count, dtype: int64
+Date range: 2011-01-01 to 2012-12-31
+
+Columns dropped (index or leakage): ['instant', 'casual', 'registered']
+dteday used only for ordering and the time split.
+
+Split
+Cutoff: 2012-10-01
+Train rows: 15211 (2011-01-01 to 2012-09-30)
+Test rows:  2168 (2012-10-01 to 2012-12-31)
+
+BASELINE RESULTS (test set)
+Hour-of-day mean (primary baseline):
+MAE 94.91
+RMSE 142.38
+R2 0.501
+Global training mean (reference):
+MAE 156.87
+RMSE 204.43
+R2 -0.028
