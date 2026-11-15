@@ -26,3 +26,9 @@ python src/baseline.py
 The script prints a data audit, the time-based split (train before the 1st of October 2012, test from that date onward)
 and MAE / RMSE / R² for an hour-of-day mean baseline and a global-mean reference. 
 The test block is not used for model choice.
+
+# Model comparison (Milestone 3)
+
+    python src/model_comparison.py
+
+Uses the same cutoff (train before 1 October 2012). Writes the results table and plots to `reports/`.
